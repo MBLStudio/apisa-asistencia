@@ -3,6 +3,7 @@
     { "source": "/favicon.ico", "destination": "/favicon-v2.png" }
   ],
   "redirects": [
+    { "source": "/", "has": [{ "type": "host", "value": "apisaasistencia.es" }], "destination": "https://www.apisaasistencia.es/", "permanent": true },
     { "source": "/:path*", "has": [{ "type": "host", "value": "apisaasistencia.es" }], "destination": "https://www.apisaasistencia.es/:path*", "permanent": true },
     { "source": "/nosotros", "destination": "/", "permanent": true },
     { "source": "/nosotros/", "destination": "/", "permanent": true },

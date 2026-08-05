@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel --prod --yes)",
+      "Bash(vercel domains *)",
+      "Bash(vercel alias *)",
+      "Bash(Resolve-DnsName apisaasistencia.es -Type A)",
+      "Bash(Resolve-DnsName www.apisaasistencia.es -Type CNAME)",
+      "PowerShell(Resolve-DnsName apisaasistencia.es -Type A)",
+      "PowerShell(Resolve-DnsName www.apisaasistencia.es -Type CNAME)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://apisaasistencia.es\" -MaximumRedirection 5 -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\"; \"Final URL: $\\($r.BaseResponse.ResponseUri\\)\"; $r.Content.Substring\\(0, 200\\))",
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://www.apisaasistencia.es/nosotros/\" -MaximumRedirection 0 -UseBasicParsing -ErrorAction SilentlyContinue; \"Status: $\\($r.StatusCode\\)\"; $r.Headers['Location'])",
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://www.apisaasistencia.es/nosotros/\" -MaximumRedirection 5 -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\")"
+    ]
+  }
+}
